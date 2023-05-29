@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_viatura"
+        android:icon="@drawable/baseline_home_24"
+        android:title=""/>
+    <item
+        android:id="@+id/item_build"
+        android:icon="@drawable/build_black"
+        android:title=""/>
+    <item
+        android:id="@+id/item_notification"
+        android:icon="@drawable/notification_black"
+        android:title=""/>
+
+    <item
+        android:id="@+id/item_documents"
+        android:icon="@drawable/baseline_folder_copy_24"
+        android:title=""/>
+
+
+
+
+</menu>

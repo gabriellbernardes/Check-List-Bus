@@ -1,0 +1,41 @@
+<resources>
+
+    <style name="popinsitalic" parent="android:Widget.TextView">
+        <item name="textAllCaps">false</item>
+        <item name="android:fontFamily">@font/poppins_extralightitalic</item>
+    </style>
+
+    <style name="popinsbold" parent="android:Widget.TextView">
+        <item name="textAllCaps">false</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
+    <style name="popinslight" parent="android:Widget.TextView">
+        <item name="textAllCaps">false</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
+    </style>
+
+    <style name="popinsboldTab" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
+    </style>
+
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#FFFFFF</item>
+        <item name="colorPrimaryDark">@color/marrom</item>
+        <item name="colorAccent">@color/marrom</item>
+        <item name="colorOnSecondary">@color/marrom</item>
+
+
+    </style>
+
+    <style name="NoActionBar" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+</resources>

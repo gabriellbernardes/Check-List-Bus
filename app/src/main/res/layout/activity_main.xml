@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bacgrou_degrade2"
+    tools:context=".activities.MainActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        style="@style/popinslight"
+        android:layout_width="409dp"
+        android:layout_height="45dp"
+        android:theme="@style/AppTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/popinsbold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/buz"
+            app:popupTheme="@style/Theme.Login.PopupOverlay">
+
+
+            <TextView
+                android:id="@+id/textTitulos"
+                style="@style/popinsbold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:text="Check List"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tooblarViaturas"
+                app:layout_constraintEnd_toEndOf="@+id/tooblarViaturas"
+                app:layout_constraintStart_toStartOf="@+id/tooblarViaturas"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/logoutButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/exit" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="0dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="2dp"
+        android:visibility="visible"
+        app:cardBackgroundColor="@color/buz"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView5"
+                style="@style/popinsbold"
+                android:layout_width="31dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="24dp"
+                android:text="ID:"
+                android:textColor="#EDEDED"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/idCheckListEt"
+                app:layout_constraintEnd_toStartOf="@+id/idCheckListEt"
+                app:layout_constraintHorizontal_bias="0.83"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/idCheckListEt"
+                app:layout_constraintVertical_bias="0.77" />
+
+            <EditText
+                android:id="@+id/idCheckListEt"
+                style="@style/popinslight"
+                android:layout_width="297dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:hint="     ID do CheckList a ..."
+                android:inputType="text"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B5AFAF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/BntGetChecklist"
+                app:layout_constraintStart_toEndOf="@+id/textView5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/BntGetChecklist"
+                style="@style/popinslight"
+                android:layout_width="49dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:drawable/ic_menu_send"
+                android:backgroundTint="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@+id/idCheckListEt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.63"
+                app:layout_constraintStart_toEndOf="@+id/idCheckListEt"
+                app:layout_constraintTop_toTopOf="@+id/idCheckListEt" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/checkListRv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:paddingTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/sendCheckListBnt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView"
+        app:layout_constraintVertical_bias="0.56" />
+
+    <Button
+        android:id="@+id/sendCheckListBnt"
+        style="@style/popinsbold"
+        android:layout_width="150sp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/radius_buz"
+        android:text="Enviar"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/reloadBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:clickable="true"
+        android:contentDescription="reload"
+        android:visibility="gone"
+        app:backgroundTint="@color/buz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@android:drawable/stat_notify_sync" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
